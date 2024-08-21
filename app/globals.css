@@ -1,33 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+
+@font-face {
+  font-family: 'UpheavalTT';
+  src: url('/fonts/upheavtt.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
+
 :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+  --primary: 255, 206, 96, 1;
+  --primaryLight: 255, 213, 116, 1;
+  --primaryDark: 223, 182, 86, 1;
+  --primaryExtraDark: 17, 14, 6, 1;
+
+  --secondary: 0, 210, 232, 1;
+  --secondaryLight: 75, 213, 233, 1;
+  --secondaryDark: 21, 182, 202, 1;
+  --secondaryExtraDark: 17, 66, 72, 1;
+
+  --white: 255, 255, 255, 1;
+  --grey: 181, 181, 181, 1;
+  --black: 0, 0, 0, 1;
+  --blackOpacity40: 0, 0, 0, 0.5;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+* {
+  background-color: var(--primaryExtraDark);
+
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  scroll-behavior: smooth;
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
+.text-stroke-3 {
+  -webkit-text-stroke: 2px rgba(255, 206, 96, 1);
+}
+
+
+@layer base {
+  h1 {
+    @apply text-[128px] leading-[166px]
+  }
+
+  h2 {
+    @apply text-[90px]
+  }
+
+  h3 {
+    @apply text-[64px]
+  }
+
+  h4 {
+    @apply text-[46px]
+  }
+
+  h5 {
+    @apply text-[32px]
+  }
+
+  h6 {
+    @apply text-[22px]
+  }
+
+  p {
+    @apply text-[16px]
+  }
+
+  label {
+    @apply text-[12px]
   }
 }
