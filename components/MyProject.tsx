@@ -1,8 +1,9 @@
 "use client";
 import { MyProjectContainer } from "@/content";
-import { AnimatePresence, motion, useScroll } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
 import Image from "next/image";
 import { useState } from "react";
+import { useSwipeable } from "react-swipeable";
 import SectionWrapper from "./SectionWrapper";
 
 const MyProject = () => {
@@ -24,19 +25,29 @@ const MyProject = () => {
     setActiveProject(id);
   };
 
+  // Swipe handlers for mobile
+  const handlers = useSwipeable({
+    onSwipedLeft: handleNextClick,
+    onSwipedRight: handlePrevClick,
+    trackMouse: true, // Optionally track mouse swipes as well
+  });
+
   return (
     <SectionWrapper>
       <section id="MyProjects" className="sm:h-screen ">
         {/* Title */}
-        <h2 className="text-primary font-upheaval drop-shadow-titleDrop w-full text-center mt-[160px]">
+        <h2 className="text-primary font-upheaval drop-shadow-titleDrop max-sm:text-2xl max-sm:drop-shadow-none w-full text-center mt-[160px]">
           MY PROJECTS
         </h2>
         {/* Content */}
 
-        <div className="w-full flex max-sm:flex-col-reverse max-sm:items-center   sm:h-[520px] shadow-bottom ">
+        <div
+          {...handlers} // Apply swipe handlers to the container
+          className="w-full flex max-sm:flex-col-reverse max-sm:items-center sm:h-[520px] shadow-bottom "
+        >
           {/* Project LEFTIMAGE */}
-          <div className="flex flex-col w-[426px]  relative">
-            <div className="inset-0 mix-blend-luminosity	">
+          <div className="flex flex-col w-[426px] relative">
+            <div className="inset-0 mix-blend-luminosity">
               <Image
                 src="/img/projectNameBg.png"
                 alt="png"
@@ -111,7 +122,7 @@ const MyProject = () => {
             </div>
           </div>
           {/* Project Image Container */}
-          <div className="w-[854px] h-[519px]   flex flex-col relative">
+          <div className="w-[854px] h-[519px] flex flex-col relative">
             {/* BigImageContainer */}
             <a
               href={MyProjectContainer[activeProject - 1].href}

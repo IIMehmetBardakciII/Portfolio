@@ -35,10 +35,10 @@ const ContactMe = () => {
   return (
     <SectionWrapper>
       <footer className="h-screen" id="Contact">
-        <h2 className="text-primary font-upheaval drop-shadow-titleDrop w-full text-center mt-[160px]">
+        <h2 className="text-primary font-upheaval drop-shadow-titleDrop w-full max-sm:text-2xl max-sm:drop-shadow-none text-center mt-[160px]">
           CONTACT ME
         </h2>
-        <div className="relative h-[500px] w-full flex gap-[30px]">
+        <div className="relative h-[500px] w-full flex max-sm:flex-col gap-[30px]">
           <div className="flex-[1] relative">
             <Image
               src="/img/ContactBg.gif"

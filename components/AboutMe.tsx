@@ -8,7 +8,7 @@ const AboutMe = () => {
     <SectionWrapper>
       <section id="About">
         {/* Title */}
-        <h2 className="text-primary font-upheaval drop-shadow-titleDrop w-full text-center mt-[160px]">
+        <h2 className="text-primary font-upheaval drop-shadow-titleDrop w-full text-center max-sm:text-2xl max-sm:drop-shadow-none mt-[160px]">
           ABOUT ME
         </h2>
         {/* Content */}

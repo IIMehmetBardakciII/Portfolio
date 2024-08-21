@@ -28,14 +28,14 @@ const Navigation = () => {
 
   return (
     <div className={`${isVisible ? "block" : "hidden"}`}>
-      <ul className="text-white bg-primary w-fit drop-shadow-custom top-[500px] right-[30px] fixed font-vt323  z-50">
-        <li className="hover:bg-primaryExtraDark w-full px-8 text-2xl">
+      <ul className="text-white bg-primary w-fit drop-shadow-custom top-[500px] max-sm:top-[450px] right-[30px] fixed font-vt323  z-50">
+        <li className="hover:bg-primaryExtraDark w-full px-8 md:text-2xl">
           <a href="#">Home</a>
         </li>
         <li>
           <a
             href="#MyProjects"
-            className="hover:bg-primaryExtraDark w-full px-8 text-2xl"
+            className="hover:bg-primaryExtraDark w-full px-8 md:text-2xl"
           >
             Project
           </a>
@@ -43,7 +43,7 @@ const Navigation = () => {
         <li>
           <a
             href="#About"
-            className="hover:bg-primaryExtraDark w-full px-8 text-2xl"
+            className="hover:bg-primaryExtraDark w-full px-8 md:text-2xl"
           >
             About
           </a>
@@ -51,7 +51,7 @@ const Navigation = () => {
         <li>
           <a
             href="#Contact"
-            className="hover:bg-primaryExtraDark w-full px-8 text-2xl"
+            className="hover:bg-primaryExtraDark w-full px-8 md:text-2xl"
           >
             Contact
           </a>

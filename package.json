@@ -14,7 +14,8 @@
     "nodemailer": "^6.9.14",
     "react": "^18",
     "react-dom": "^18",
-    "react-intersection-observer": "^9.13.0"
+    "react-intersection-observer": "^9.13.0",
+    "react-swipeable": "^7.0.1"
   },
   "devDependencies": {
     "@types/node": "^20",
